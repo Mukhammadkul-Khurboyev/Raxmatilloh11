@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mototsikllar katalogi — sport, naked, touring va adventure bayklar.">
+  <title>MOTOZONE | Mototsikllar olami</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#"><span class="logo-mark">M</span> MOTO<span>ZONE</span></a>
+    <nav>
+      <a href="#catalog">Mototsikllar</a>
+      <a href="#about">Biz haqimizda</a>
+      <a href="#contact">Aloqa</a>
+    </nav>
+    <a class="header-cta" href="#catalog">Katalogni ko‘rish <span>↗</span></a>
+    <button class="cart-btn" id="cartBtn" aria-label="Savatchani ochish">🛒 <b id="cartCount">0</b></button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menyuni ochish">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="eyebrow-line"></span> TEZLIK. ERKINLIK. USLUB.</p>
+        <h1>YO‘L SENIKI.<br><span>CHEGARASIZ</span> YUR.</h1>
+        <p class="hero-text">O‘zingga mos mototsiklni top. Kuchli sport bayklardan tortib, uzoq yo‘l uchun yaratilgan sayohat mototsikllarigacha.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#catalog">Katalogni ko‘r <span>↘</span></a>
+          <a class="btn btn-ghost" href="#about">Biz haqimizda</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>24<span>+</span></strong><small>Mototsikl modeli</small></div>
+          <div><strong>12<span>+</span></strong><small>Mashhur brend</small></div>
+          <div><strong>100<span>%</span></strong><small>Erkinlik hissi</small></div>
+        </div>
+      </div>
+      <div class="hero-tag"><span class="tag-dot"></span> RIDE YOUR OWN WAY</div>
+    </section>
+
+    <section class="catalog section" id="catalog">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> BIZNING TANLOV</p>
+          <h2>O‘ZINGGA MOS <span>BAYKNI TOP</span></h2>
+        </div>
+        <p class="section-note">Har bir yo‘l uchun o‘ziga xos xarakter.<br>Tanla, solishtir va yo‘lga chiq.</p>
+      </div>
+
+      <div class="catalog-controls">
+        <label class="search-box">
+          <span>⌕</span>
+          <input id="searchInput" type="search" placeholder="Mototsikl yoki brendni qidir..." autocomplete="off">
+        </label>
+        <div class="filters" id="categoryFilters" aria-label="Tur bo‘yicha filter">
+          <button class="filter-btn active" data-category="Barchasi">Barchasi</button>
+          <button class="filter-btn" data-category="Sport">Sport</button>
+          <button class="filter-btn" data-category="Naked">Naked</button>
+          <button class="filter-btn" data-category="Touring">Touring</button>
+          <button class="filter-btn" data-category="Adventure">Adventure</button>
+          <button class="filter-btn" data-category="Cruiser">Cruiser</button>
+        </div>
+        <label class="sort-box">
+          <span>Sort:</span>
+          <select id="sortSelect" aria-label="Saralash">
+            <option value="featured">Tavsiya etilgan</option>
+            <option value="price-low">Narx: arzon → qimmat</option>
+            <option value="price-high">Narx: qimmat → arzon</option>
+            <option value="power-high">Quvvat: yuqori → past</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="results-line"><span id="resultsCount">12 ta mototsikl</span><span class="live-dot"></span><span>Tanlovni o‘zing boshqar</span></div>
+      <div class="bike-grid" id="bikeGrid"></div>
+      <div class="empty-state" id="emptyState" hidden>
+        <span>⌕</span><h3>Hech narsa topilmadi</h3><p>Boshqa nom yoki tur bo‘yicha qidirib ko‘r.</p>
+        <button class="btn btn-primary" id="resetFilters">Filtrlarni tozalash</button>
+      </div>
+    </section>
+
+    <section class="feature-band" id="about">
+      <div class="feature-image"></div>
+      <div class="feature-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> MOTOZONE RUHI</p>
+        <h2>BU SHUNCHAKI<br><span>MOTOR EMAS.</span></h2>
+        <p>Bu — yo‘lni his qilish, yangi manzillarni kashf etish va o‘z qoidang bilan yashash. Senga mos bayk shu yerdan boshlanadi.</p>
+        <a class="btn btn-primary" href="#catalog">Bayklarni ko‘r <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="bottom-cta" id="contact">
+      <div><p class="eyebrow"><span class="eyebrow-line"></span> KEYINGI SARGUZASHTING</p><h2>YO‘LGA TAYYORMISAN?</h2></div>
+      <a class="btn btn-primary" href="#catalog">Mototsikl tanlash <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="#"><span class="logo-mark">M</span> MOTO<span>ZONE</span></a>
+    <p>© <span id="year"></span> MOTOZONE. Barcha huquqlar himoyalangan.</p>
+    <a href="#top" id="backTop">Yuqoriga ↑</a>
+  </footer>
+
+  <div class="modal" id="bikeModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Yopish">×</button>
+      <img id="modalImage" src="" alt="Mototsikl rasmi">
+      <div class="modal-info">
+        <p class="eyebrow" id="modalCategory">SPORT</p>
+        <h2 id="modalTitle">Mototsikl nomi</h2>
+        <p id="modalDescription"></p>
+        <div class="modal-specs" id="modalSpecs"></div>
+        <div class="modal-bottom"><strong id="modalPrice"></strong><button class="btn btn-primary" id="modalContact">Savatchaga 🛒</button></div>
+        <p class="modal-note">Narxlar ma’lumot uchun keltirilgan. Haqiqiy narx va mavjudlik farq qilishi mumkin.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-panel" id="cartPanel" aria-label="Savatcha" aria-hidden="true">
+    <div class="cart-head"><h3>SAVATCHA</h3><button class="cart-x" id="cartClose" aria-label="Savatchani yopish">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot"><span>Jami:</span><strong id="cartTotal">$0</strong></div>
+    <button class="btn btn-primary cart-order" id="cartOrder">Buyurtma berish ↗</button>
+    <button class="cart-clear" id="cartClear">Savatchani tozalash</button>
+  </aside>
+
+  <div class="modal" id="orderModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-order></div>
+    <div class="order-panel" role="dialog" aria-modal="true" aria-labelledby="orderTitle">
+      <button class="modal-close" id="orderClose" aria-label="Yopish">×</button>
+
+      <form id="orderForm" novalidate>
+        <p class="eyebrow"><span class="eyebrow-line"></span> BUYURTMA</p>
+        <h2 id="orderTitle">BUYURTMA BERISH</h2>
+        <div class="order-summary" id="orderSummary"></div>
+        <label class="field"><span>Ismingiz</span>
+          <input id="orderName" type="text" placeholder="Ism familiya" autocomplete="name" required>
+          <small class="field-error" id="errName"></small>
+        </label>
+        <label class="field"><span>Telefon raqam</span>
+          <input id="orderPhone" type="tel" placeholder="+998 90 123 45 67" autocomplete="tel" required>
+          <small class="field-error" id="errPhone"></small>
+        </label>
+        <label class="field"><span>Izoh (ixtiyoriy)</span>
+          <textarea id="orderNote" rows="3" placeholder="Rang, qo‘shimcha savol yoki qulay vaqt..."></textarea>
+        </label>
+        <div class="order-total"><span>Jami:</span><strong id="orderTotal">$0</strong></div>
+        <button class="btn btn-primary order-submit" type="submit">Buyurtmani tasdiqlash ↗</button>
+        <p class="modal-note">Operatorimiz siz bilan telefon orqali bog‘lanadi. Narxlar taxminiy.</p>
+      </form>
+
+      <div class="order-success" id="orderSuccess" hidden>
+        <div class="success-icon">✓</div>
+        <h2>BUYURTMA QABUL QILINDI!</h2>
+        <p>Buyurtma raqami: <strong id="orderNumber">#0000</strong></p>
+        <p class="success-text">Tez orada operatorimiz <b id="successPhone"></b> raqami orqali bog‘lanadi.</p>
+        <button class="btn btn-primary" id="orderDone">Yaxshi ↗</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="main.js"></script>
+</body>
+</html>
